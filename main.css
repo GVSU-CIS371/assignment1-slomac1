@@ -4,21 +4,28 @@ html {
   /* height:100%; */
 
   margin: 0px;
-  padding: 5px;
-  background: gray;
+  padding: 0px;
+  background: #0B294D;
 }
 
 #app {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 80px 1fr 60px;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr 60px;
 }
 
 #app header {
   grid-row: 1;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   align-items: center;
+  font-family: "Arial Black";
+  font-size: 20px;
+  color: black;
+  background: #f0f0f0;
+  border: 5px solid black;
+  border-radius: 20px;
+  margin: 5px;
 }
 
 header h1 {
@@ -30,22 +37,29 @@ header ul {
   grid-column: 2;
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 25px;
   justify-content: flex-end;
-
+  padding-right: 5px;
+  flex-wrap: wrap;
+  color: black;
 }
 
 #app main {
   grid-row: 2;
   display: grid;
+  border: 5px solid black;
+  border-radius: 10px;
+  background: #f0f0f0;
   grid-template-columns: repeat(4,1fr);
-  gap: 10px;
+  margin: 5px;
 }
 
 main .store-item{
   display: grid;
-  border: 5px double black;
-  background: white;
+  border: 5px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  background: #D9D9D9;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
@@ -57,16 +71,22 @@ main .store-item{
 
 .store-item img {
   grid-area: img;
-  width: 100%;
+  width: 85%;
   aspect-ratio: 1/1;
   object-fit: contain;
   justify-self: center;
   text-align: center;
-  padding: 10px;
+  border: 2px solid #2A2A2A;
+  border-radius: 5px;
+  background: white;
+  margin: 5px;
+  padding: 5px;
 }
 
 .store-item p:first-of-type {
   grid-area: title;
+  font-family: "Arial Black";
+  font-size: 14px;
   height: fit-content;
   margin-block-end: 10px;
   padding-left: 5px;
@@ -75,6 +95,8 @@ main .store-item{
 
 .store-item p:last-of-type {
   grid-area: desc;
+  font-family: Arial;
+  font-size: 12px;
   height: fit-content;
   margin-block-start: 0;
   padding-left: 5px;
@@ -83,23 +105,32 @@ main .store-item{
 
 .store-item span:nth-child(4) {
   grid-area: span1;
+  font-family: "Arial Black";
+  font-size: 12px;
   padding-left: 10px;
   padding-bottom: 5px;
 }
 
 .store-item span:nth-child(5) {
   grid-area: span2;
+  font-family: "Arial Black";
+  font-size: 12px;
   padding-bottom: 5px;
 }
 
 .store-item span:nth-child(6) {
   grid-area: span3;
+  font-family: "Arial Black";
+  font-size: 12px;
   padding-right: 10px;
   padding-bottom: 5px;
 }
 
 #app footer{
   grid-row: 3;
-  justify-self: center;
   text-align: center;
+  background: #f0f0f0;
+  border: 5px solid black;
+  border-radius: 20px;
+  margin: 5px;
 }
